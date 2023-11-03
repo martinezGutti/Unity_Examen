@@ -35,16 +35,15 @@ public class Pregunta_5 : MonoBehaviour
             Vector3 spider1_direction = Vector3.MoveTowards(spider1.transform.position, zombie.transform.position, spider1_dist * Time.deltaTime);
             spider1.transform.position = spider1_direction;
 
-            Vector3 spider2_direction = Vector3.MoveTowards(spider2.transform.position, zombie.transform.position, spider1_dist * Time.deltaTime);
+            Vector3 spider2_direction = Vector3.MoveTowards(spider2.transform.position, zombie.transform.position, spider2_dist * Time.deltaTime);
             spider2.transform.position = spider2_direction;
 
-            Vector3 spider3_direction = Vector3.MoveTowards(spider3.transform.position, zombie.transform.position, spider1_dist * Time.deltaTime);
+            Vector3 spider3_direction = Vector3.MoveTowards(spider3.transform.position, zombie.transform.position, spider3_dist * Time.deltaTime);
             spider3.transform.position = spider3_direction;
         }
     }
 
     void OnCollisionEnter(Collision collision) {
-        Debug.Log("HALLO=");
         if(collision.gameObject == zombie) {
             near = true;
         }
